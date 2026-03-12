@@ -1,8 +1,8 @@
 ---
-title: "Five People Who Don't Need to Learn AI (But Should Still Have an Agent)"
-heroImage: "/hero-five-people-who-dont-need-to-learn-ai.png"
-heroImagePublic: "/images/hero-five-people-who-dont-need-to-learn-ai.png"
-heroImageAstro: "../../assets/hero-five-people-who-dont-need-to-learn-ai.png"
+title: 'Five People Who Don''t Need to Learn AI (But Should Still Have an Agent)'
+description: 'A deep dive into Five People Who Don''t Need to Learn AI (But Should Still Have an Agent)'
+pubDate: "Mar 12 2026"
+heroImage: "../../assets/hero-five-people-who-dont-need-to-learn-ai.png"
 ---
 # Five People Who Don't Need to Learn AI (But Should Still Have an Agent)
 

@@ -1,8 +1,8 @@
 ---
-title: "The Pre-Onboarding Checklist: Preparing Your Team for Their New AI Agent (March 2026)"
-heroImage: "/hero-team-onboarding-checklist-non-technical.png"
-heroImagePublic: "/images/hero-team-onboarding-checklist-non-technical.png"
-heroImageAstro: "../../assets/hero-team-onboarding-checklist-non-technical.png"
+title: 'The Pre-Onboarding Checklist: Preparing Your Team for Their New AI Agent (March 2026)'
+description: 'A deep dive into The Pre-Onboarding Checklist: Preparing Your Team for Their New AI Agent (March 2026)'
+pubDate: "Mar 12 2026"
+heroImage: "../../assets/hero-team-onboarding-checklist-non-technical.png"
 ---
 # The Pre-Onboarding Checklist: Preparing Your Team for Their New AI Agent (March 2026)
 

@@ -1,8 +1,8 @@
 ---
-title: "Before/After: What Actually Changes When You Get an AI Agent"
-heroImage: "/hero-before-after-workflows.png"
-heroImagePublic: "/images/hero-before-after-workflows.png"
-heroImageAstro: "../../assets/hero-before-after-workflows.png"
+title: 'Before/After: What Actually Changes When You Get an AI Agent'
+description: 'A deep dive into Before/After: What Actually Changes When You Get an AI Agent'
+pubDate: "Mar 12 2026"
+heroImage: "../../assets/hero-before-after-workflows.png"
 ---
 # Before/After: What Actually Changes When You Get an AI Agent
 

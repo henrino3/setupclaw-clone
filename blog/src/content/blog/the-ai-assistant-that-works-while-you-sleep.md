@@ -1,8 +1,8 @@
 ---
-title: "The AI Assistant That Works While You Sleep"
-heroImage: "/hero-the-ai-assistant-that-works-while-you-sleep.png"
-heroImagePublic: "/images/hero-the-ai-assistant-that-works-while-you-sleep.png"
-heroImageAstro: "../../assets/hero-the-ai-assistant-that-works-while-you-sleep.png"
+title: 'The AI Assistant That Works While You Sleep'
+description: 'A deep dive into The AI Assistant That Works While You Sleep'
+pubDate: "Mar 12 2026"
+heroImage: "../../assets/hero-the-ai-assistant-that-works-while-you-sleep.png"
 ---
 # The AI Assistant That Works While You Sleep
 
