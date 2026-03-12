@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetupClaw UK — White-Glove OpenClaw Deployment for Founders & Exec Teams</title>
+    <meta name="description" content="White-glove OpenClaw deployment for founders and exec teams in London and the UK. We professionally deploy and maintain the AI assistant that clears your inbox, manages your calendar, and actually does work.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafafa;
+        }
+        .banner {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+        .banner a { color: #60a5fa; text-decoration: none; }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+        h1 { font-size: 48px; font-weight: 700; margin-bottom: 24px; }
+        h2 { font-size: 28px; font-weight: 600; margin: 48px 0 24px; }
+        h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; }
+        p { margin-bottom: 16px; color: #4a4a4a; }
+        .hero-text { font-size: 18px; line-height: 1.8; color: #333; }
+        code { background: #e5e7eb; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+        .integrations { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; align-items: center; }
+        .integrations img { height: 32px; opacity: 0.7; }
+        .integrations span { color: #666; font-size: 14px; }
+        blockquote {
+            background: #fff;
+            border-left: 4px solid #3b82f6;
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        blockquote p { margin-bottom: 8px; font-style: italic; }
+        blockquote cite { font-size: 14px; color: #666; }
+        blockquote a { color: #3b82f6; text-decoration: none; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 32px 0; }
+        .pricing-card {
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+        .pricing-card:hover { border-color: #3b82f6; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .pricing-card .type { font-size: 12px; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+        .pricing-card .name { font-size: 20px; font-weight: 600; margin: 8px 0; }
+        .pricing-card .desc { font-size: 14px; color: #666; margin-bottom: 16px; }
+        .pricing-card .price { font-size: 32px; font-weight: 700; }
+        .pricing-card .period { font-size: 14px; color: #666; }
+        .steps { counter-reset: step; }
+        .step { display: flex; gap: 20px; margin: 24px 0; align-items: flex-start; }
+        .step-num {
+            counter-increment: step;
+            width: 40px; height: 40px;
+            background: #3b82f6; color: #fff;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 600; flex-shrink: 0;
+        }
+        .step-num::before { content: counter(step); }
+        .faq details { border-bottom: 1px solid #e5e7eb; }
+        .faq summary { padding: 16px 0; cursor: pointer; font-weight: 500; }
+        .faq p { padding-bottom: 16px; }
+        .cta-section { text-align: center; padding: 48px 0; }
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #2563eb; }
+        .btn-outline { background: transparent; border: 2px solid #3b82f6; color: #3b82f6; }
+        .btn-outline:hover { background: #3b82f6; color: #fff; }
+        .security-list { list-style: none; }
+        .security-list li { padding: 8px 0; padding-left: 24px; position: relative; }
+        .security-list li::before { content: "•"; position: absolute; left: 0; color: #3b82f6; }
+        .contact-card {
+            display: flex; gap: 16px; align-items: center;
+            background: #fff; padding: 24px; border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-decoration: none; color: inherit;
+        }
+        .contact-card img { width: 64px; height: 64px; border-radius: 50%; }
+        footer { text-align: center; padding: 40px 20px; color: #666; font-size: 14px; }
+        footer a { color: #3b82f6; text-decoration: none; }
+        .waitlist-form { background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin: 32px 0; }
+        .waitlist-form input, .waitlist-form textarea {
+            width: 100%; padding: 12px 16px; border: 1px solid #e5e7eb; border-radius: 8px;
+            font-size: 16px; margin-bottom: 16px; font-family: inherit;
+        }
+        .waitlist-form button { width: 100%; }
+        .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0; }
+        .location-card { background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .location-card .type { font-size: 12px; text-transform: uppercase; color: #666; letter-spacing: 1px; }
+        .location-card .area { font-size: 20px; font-weight: 600; margin: 8px 0; }
+        @media (max-width: 640px) {
+            h1 { font-size: 32px; }
+            .location-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        London & UK in-person + remote worldwide. DM <a href="https://x.com/iamHenryMascot" target="_blank">@iamHenryMascot</a> or <a href="https://cal.com/henrymascot/openclaw-setup" target="_blank">book a call</a>
+    </div>
+
+    <main class="container">
+        <h1>SetupClaw UK</h1>
+        
+        <p class="hero-text">
+            White-glove <a href="https://openclaw.ai" target="_blank"><code>OpenClaw</code></a> deployment for founders and exec teams. We professionally deploy and maintain the AI assistant that clears your inbox, manages your calendar, and actually does work — on your hardware, with security hardening and ongoing care. Built for companies with 4–50+ employees where the CEO/CFO/Head of Sales needs leverage without creating new security risk.
+        </p>
+
+        <div class="integrations">
+            <span>Connects to</span>
+            <span>Gmail</span>
+            <span>Google Calendar</span>
+            <span>Outlook</span>
+            <span>Slack</span>
+            <span>iMessage</span>
+            <span>WhatsApp</span>
+            <span>Notion</span>
+            <span>Google Drive</span>
+            <span>Zoom</span>
+            <span>HubSpot</span>
+            <span>Salesforce</span>
+            <span>GitHub</span>
+            <span>+20 more</span>
+        </div>
+
+        <h2>What's an "Executive Agent"?</h2>
+        <p>1 Executive Agent = 1 OpenClaw instance configured for one primary identity (CEO inbox/calendar, CFO inbox, Head of Sales, shared EA inbox). This keeps pricing fair and security boundaries clean. Most 4–50 employee teams deploy 2–6 agents.</p>
+
+        <h2>What people are saying about OpenClaw</h2>
+        
+        <blockquote>
+            <p>"Genuinely the most incredible sci-fi takeoff-adjacent thing I have seen recently."</p>
+            <cite>— <a href="https://x.com/karpathy" target="_blank">Andrej Karpathy</a>, former Director of AI at Tesla</cite>
+        </blockquote>
+
+        <blockquote>
+            <p>"It feels like hiring an employee rather than opening another chat window."</p>
+            <cite>— <a href="https://www.macstories.net/stories/clawdbot-showed-me-what-the-future-of-personal-ai-assistants-looks-like/" target="_blank">MacStories</a></cite>
+        </blockquote>
+
+        <blockquote>
+            <p>"Within an hour it had built a fully featured kanban board where I could assign it tasks and track their state."</p>
+            <cite>— <a href="https://www.macstories.net/stories/clawdbot-showed-me-what-the-future-of-personal-ai-assistants-looks-like/" target="_blank">MacStories</a> review</cite>
+        </blockquote>
+
+        <blockquote>
+            <p>"One user cleared nearly 6,000 emails from their inbox on the first day."</p>
+            <cite>— <a href="https://www.turingcollege.com/blog/openclaw" target="_blank">Turing College</a></cite>
+        </blockquote>
+
+        <h2>Why not just set it up yourself?</h2>
+        <p>You can — OpenClaw is open-source. But most teams need custom integrations beyond the defaults, and even experienced engineers spend several hours getting everything wired up. Then there's the ongoing maintenance: updates, drift, broken workflows, security patches. We handle all of it — deployed securely from day one, following the <a href="https://docs.openclaw.ai/gateway/security" target="_blank">official hardening guide</a>, so your team gets leverage instead of another project to maintain.</p>
+
+        <h2>Pricing</h2>
+        <p style="color:#666; font-size:14px;">Implementation</p>
+        
+        <div class="pricing-grid">
+            <a href="https://cal.com/henrymascot/openclaw-setup" class="pricing-card" target="_blank">
+                <div class="type">In-person</div>
+                <div class="name">London & South East</div>
+                <div class="desc">First agent + hardening + 14-day hypercare</div>
+                <div class="price">£1,997</div>
+            </a>
+            <a href="https://cal.com/henrymascot/openclaw-setup" class="pricing-card" target="_blank">
+                <div class="type">Remote</div>
+                <div class="name">UK & Worldwide</div>
+                <div class="desc">First agent + hardening + 14-day hypercare</div>
+                <div class="price">£997</div>
+            </a>
+            <a href="https://cal.com/henrymascot/openclaw-setup" class="pricing-card" target="_blank">
+                <div class="type">Additional</div>
+                <div class="name">Executive Agent</div>
+                <div class="desc">CEO, EA, Sales, Finance — deploy your exec team</div>
+                <div class="price">+£997</div>
+                <div class="period">each</div>
+            </a>
+        </div>
+
+        <p style="color:#666; font-size:14px;">Managed Care</p>
+        
+        <div class="pricing-grid">
+            <a href="https://cal.com/henrymascot/openclaw-setup" class="pricing-card" target="_blank">
+                <div class="type">Care Standard</div>
+                <div class="name">Up to 2 agents</div>
+                <div class="desc">Monitoring, support, 2 hrs/mo included</div>
+                <div class="price">£1,500</div>
+                <div class="period">/month</div>
+            </a>
+            <a href="https://cal.com/henrymascot/openclaw-setup" class="pricing-card" target="_blank">
+                <div class="type">Care Plus</div>
+                <div class="name">Up to 5 agents</div>
+                <div class="desc">Priority support, monthly review, 6 hrs/mo</div>
+                <div class="price">£3,000</div>
+                <div class="period">/month</div>
+            </a>
+            <a href="https://cal.com/henrymascot/openclaw-setup" class="pricing-card" target="_blank">
+                <div class="type">Care Enterprise</div>
+                <div class="name">Custom</div>
+                <div class="desc">SLA, fleet standards, audit logs, security reviews</div>
+                <div class="price">from £6,000</div>
+                <div class="period">/month</div>
+            </a>
+        </div>
+
+        <div class="cta-section">
+            <a href="https://cal.com/henrymascot/openclaw-setup" class="btn" target="_blank">Book a free call →</a>
+        </div>
+
+        <a href="https://x.com/iamHenryMascot" class="contact-card" target="_blank">
+            <img src="https://pbs.twimg.com/profile_images/1822321529635233792/o4j1MoZi_400x400.jpg" alt="Henry Mascot">
+            <div>
+                <strong>Talk to Henry</strong>
+                <p style="margin:0; font-size:14px; color:#666;">DM me on Twitter — happy to answer any questions</p>
+                <p style="margin:0; color:#3b82f6;">@iamHenryMascot →</p>
+            </div>
+        </a>
+
+        <p style="font-size:14px; color:#666; margin-top:24px;">Hardware at cost or bring your own. Mac mini required for iMessage.</p>
+        <p style="font-size:14px; color:#666;">Implementation includes 14-day hypercare. Ongoing support requires Managed Care.</p>
+
+        <h2>Where we operate</h2>
+        
+        <div class="location-grid">
+            <div class="location-card">
+                <div class="type">In-person</div>
+                <div class="area">London & South East UK</div>
+                <p style="font-size:14px; color:#666; margin:0;">Expanding to Manchester, Birmingham, Edinburgh</p>
+            </div>
+            <div class="location-card">
+                <div class="type">Remote</div>
+                <div class="area">UK & Worldwide</div>
+                <p style="font-size:14px; color:#666; margin:0;">We deploy on your hardware or VPS over a call</p>
+            </div>
+        </div>
+
+        <h2>How it works</h2>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-num"></div>
+                <div>
+                    <strong>Kickoff</strong>
+                    <p>Goals, systems (Google/Microsoft), security posture</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num"></div>
+                <div>
+                    <strong>Implementation</strong>
+                    <p>Install + harden + connect integrations + build workflows</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num"></div>
+                <div>
+                    <strong>Go-live</strong>
+                    <p>You start using it the same day</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num"></div>
+                <div>
+                    <strong>Hypercare</strong>
+                    <p>14 days of fast fixes and tuning via your dedicated Slack Connect channel</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num"></div>
+                <div>
+                    <strong>Managed Care</strong>
+                    <p>Monitoring, updates, drift checks, and ongoing improvements</p>
+                </div>
+            </div>
+        </div>
+        
+        <p style="font-size:14px; color:#666;">Most companies are 5–8 hours all-in, especially with multiple agents.</p>
+
+        <h2>FAQ</h2>
+        
+        <div class="faq">
+            <details>
+                <summary>What is OpenClaw?</summary>
+                <p>An open-source AI assistant that can triage email, schedule meetings, draft replies, and automate workflows across your tools — running on your own hardware.</p>
+            </details>
+            <details>
+                <summary>What's included in implementation?</summary>
+                <p>Install + hardening, email + calendar integration, up to 3 mission-critical workflows, documentation, and 14-day hypercare. For in-person (London), we come to your location.</p>
+            </details>
+            <details>
+                <summary>How long does setup take?</summary>
+                <p>Expect 5–8 hours all-in for most teams (more with multi-agent rollouts). You go live the same day, typically across one or two sessions.</p>
+            </details>
+            <details>
+                <summary>Do you offer support after setup?</summary>
+                <p>Every customer gets a dedicated Slack Connect channel for direct support. Implementation includes 14-day hypercare. For ongoing monitoring, updates, and support, you'll need a Managed Care plan.</p>
+            </details>
+            <details>
+                <summary>Is OpenClaw safe to run?</summary>
+                <p>It's never 100% safe — it's an AI with access to your email and calendar. The bigger risk is your InfoSec or CISO blocking it as shadow AI before you get any value from it. We configure it to pass security review: audit trails, access controls, hardening. We help you make the decisions necessary to get it to production instead of stuck in compliance limbo.</p>
+            </details>
+            <details>
+                <summary>What access do you need during setup?</summary>
+                <p>Temporary access to the machine/network and the accounts you're connecting (email, calendar, messaging). We use least privilege and recommend credential rotation after go-live.</p>
+            </details>
+            <details>
+                <summary>Do you do multi-agent deployments?</summary>
+                <p>Yes — this is the common case for 4–50 employee teams. We'll help decide which roles need their own agent vs shared workflows.</p>
+            </details>
+        </div>
+
+        <h2>Security & your data</h2>
+        <p>OpenClaw runs locally — your data stays on your hardware. We follow the <a href="https://docs.openclaw.ai/gateway/security" target="_blank">official hardening guide</a>:</p>
+        <ul class="security-list">
+            <li>Inbound access locked — DM pairing, mention-gating in groups, explicit allowlists</li>
+            <li>Network exposure minimized — loopback-only binding, no public endpoints</li>
+            <li>Tool blast radius limited — elevated tools restricted, sandboxing enabled</li>
+            <li>File permissions set — credentials and config locked to your user</li>
+            <li>Credentials in env vars — not in prompts, redacted from logs</li>
+            <li>Plugins explicitly allowed — no third-party or unaudited code</li>
+            <li>Security audit before handoff — you can re-run it anytime</li>
+        </ul>
+
+        <h2>Not in London?</h2>
+        <p>We're expanding in-person setups to new UK cities. Join the waitlist and we'll let you know when we're in yours.</p>
+        
+        <div class="waitlist-form">
+            <form action="https://formspree.io/f/xpwzqgkl" method="POST">
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="text" name="city" placeholder="City *" required>
+                <textarea name="use_case" placeholder="What would you use it for? (optional)" rows="3"></textarea>
+                <button type="submit" class="btn">Join the waitlist</button>
+            </form>
+        </div>
+
+        <p style="text-align:center;">Questions? <a href="https://cal.com/henrymascot/openclaw-setup">Book a call</a> or DM <a href="https://x.com/iamHenryMascot">@iamHenryMascot</a></p>
+    </main>
+
+    <footer>
+        <p>© 2026 SetupClaw UK. All rights reserved.</p>
+        <p><a href="/terms">Terms of Service</a> · <a href="/privacy">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
